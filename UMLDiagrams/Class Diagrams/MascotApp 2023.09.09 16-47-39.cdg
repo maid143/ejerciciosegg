@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="MascotApp">
+  <ClassDiagramComponents>
+    <Class name="Mascota" package="mascotapp.entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apodo" type="String" visibility="private"/>
+        <Field name="tipo" type="String" visibility="private"/>
+        <Field name="edad" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apodo"/>
+          <Argument type="String" name="tipo"/>
+          <Argument type="Integer" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApodo" returnType="String" visibility="public"/>
+        <Method name="setApodo" returnType="void" visibility="public">
+          <Argument type="String" name="apodo"/>
+        </Method>
+        <Method name="getTipo" returnType="String" visibility="public"/>
+        <Method name="setTipo" returnType="void" visibility="public">
+          <Argument type="String" name="tipo"/>
+        </Method>
+        <Method name="getEdad" returnType="Integer" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="mascotapp.entidades" visibility="public" xPosition="585.0" yPosition="81.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="dni" type="Integer" visibility="private"/>
+        <Field name="nacimiento" type="Date" visibility="private"/>
+        <Field name="mascota" type="Mascota" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="mascota" source="mascotapp.entidades.Usuario" target="mascotapp.entidades.Mascota" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
